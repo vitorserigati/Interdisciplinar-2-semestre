@@ -1,11 +1,10 @@
 package oop.interdisciplinar.classes;
-
 import java.text.MessageFormat;
-import java.util.Date;
+
 
 public class Treino {
-    String name;
-    int dias;
+    private String name;
+    private int dias;
 
     public Treino(){}
     public Treino(String name, int dias){
