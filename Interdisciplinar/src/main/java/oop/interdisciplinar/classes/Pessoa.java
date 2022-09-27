@@ -1,15 +1,16 @@
 package oop.interdisciplinar.classes;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class Pessoa {
     private String nome;
     private int idade;
     private Calendar dataNascimento;
-    private Treino treino;
+    private ArrayList<Treino> treino;
 
     public Pessoa(){}
 
-    public Pessoa(String nome, Calendar dataNascimento, Treino treino){
+    public Pessoa(String nome, Calendar dataNascimento, ArrayList<Treino> treino){
         setNome(nome);
         setDataNascimento(dataNascimento);
         setTreino(treino);
@@ -36,10 +37,11 @@ public class Pessoa {
         }
     }
 
-    public Treino getTreino(){
-        return this.treino;
+    public String getTreino(){
+
+        return "1º treino: \n" + this.treino.get(0) + "\n2º treino: \n" + this.treino.get(1);
     }
-    public void setTreino(Treino treino){
+    public void setTreino(ArrayList<Treino> treino){
         this.treino = treino;
     }
 
@@ -53,6 +55,6 @@ public class Pessoa {
 
     }
     public String toString(){
-        return "Nome: " + getNome() + "\nIdade: " + getIdade() + "\nTipo de treino: " + getTreino();
+        return "Nome: " + getNome() + "\nIdade: " + getIdade() + "\nTipo de treino: \n" + getTreino();
     }
 }
