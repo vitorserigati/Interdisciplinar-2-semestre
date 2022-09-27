@@ -1,9 +1,9 @@
 # Projeto Interdisciplinar – 2022 – 2º semestre
-   Técnicas de Desenvolvimento de Algoritmos
-   Programação Orientada a Objetos
-   Curso: CST em Análise e Desenvolvimento de Sistemas (ADS)
-   Semestres: 1º Noturno
-   Campus: Vila Lobos
+# Técnicas de Desenvolvimento de Algoritmos
+# Programação Orientada a Objetos
+# Curso: CST em Análise e Desenvolvimento de Sistemas (ADS)
+# Semestres: 1º Noturno
+# Campus: Vila Lobos
   Disciplinas Envolvidas: TDA – Técnicas de Desenvolvimento de Algoritmos (Prof. Silvio) e POO
   – Programação Orientada a Objetos (Profa. Kátia)
   Apresentação/entrega: Os detalhes de entrega constam nesse documento que deverão ser
@@ -24,7 +24,7 @@ Técnicas de Desenvolvimento de Algoritmos e Programação Orientada a Objetos e
 construção de um sistema em Java que permita cadastro de itens, edições, consultas.
 O grupo deverá desenvolver algoritmos e um programa em Java, com classes específicas
 para resolver questões pertinentes ao seguinte sistema:
-## -Sistema de controle de treinos para academia.
+## - Sistema de controle de treinos para academia.
 As classes criadas para resolução do problema deverão ter os atributos específicos ao elemento
 denotado, e deverá conter todos os métodos get e set e construtores. Além de contemplar os
 conceitos de Herança, Classes Abstratas e Polimorfismo e a definição de no mínimo 3 classes.
