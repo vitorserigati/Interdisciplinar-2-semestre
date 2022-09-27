@@ -1,9 +1,9 @@
 # Projeto Interdisciplinar – 2022 – 2º semestre
-# Técnicas de Desenvolvimento de Algoritmos
-# Programação Orientada a Objetos
-# Curso: CST em Análise e Desenvolvimento de Sistemas (ADS)
-# Semestres: 1º Noturno
-# Campus: Vila Lobos
+- Técnicas de Desenvolvimento de Algoritmos
+- Programação Orientada a Objetos
+- Curso: CST em Análise e Desenvolvimento de Sistemas (ADS)
+- Semestres: 1º Noturno
+- Campus: Vila Lobos
   Disciplinas Envolvidas: TDA – Técnicas de Desenvolvimento de Algoritmos (Prof. Silvio) e POO
   – Programação Orientada a Objetos (Profa. Kátia)
   Apresentação/entrega: Os detalhes de entrega constam nesse documento que deverão ser
