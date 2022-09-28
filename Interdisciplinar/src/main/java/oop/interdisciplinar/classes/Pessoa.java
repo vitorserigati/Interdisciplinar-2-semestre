@@ -1,4 +1,5 @@
 package oop.interdisciplinar.classes;
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -7,8 +8,6 @@ public class Pessoa {
     private int idade;
     private Calendar dataNascimento;
     private ArrayList<Treino> treino;
-
-    public Pessoa(){}
 
     public Pessoa(String nome, Calendar dataNascimento, ArrayList<Treino> treino){
         setNome(nome);
@@ -21,7 +20,7 @@ public class Pessoa {
         return this.nome;
     }
     public void setNome(String nome){
-        if (nome.length() >= 3 && nome != this.nome){
+        if (nome.length() >= 3 && !nome.equals(this.nome)){
             this.nome = nome;
         }
     }
@@ -34,6 +33,9 @@ public class Pessoa {
         Calendar hoje = Calendar.getInstance();
         if((hoje.get(Calendar.YEAR) - dataNascimento.get(Calendar.YEAR)) >= 18){
             this.dataNascimento = dataNascimento;
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Cliente não possuí idade suficiente para treinar.");
         }
     }
 
