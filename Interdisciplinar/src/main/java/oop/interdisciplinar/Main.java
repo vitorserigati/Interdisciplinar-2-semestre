@@ -6,12 +6,14 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+import static oop.interdisciplinar.Utils.*;
+
 
 public class Main {
-    private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-    private static final Calendar nascimento = Calendar.getInstance();
-    private static final ArrayList<Pessoa> pessoas = new ArrayList<>();
-    private static final ArrayList<Treino> treinos = new ArrayList<>();
+    public static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+    public static final Calendar nascimento = Calendar.getInstance();
+    public static final ArrayList<Pessoa> pessoas = new ArrayList<>();
+    public static final ArrayList<Treino> treinos = new ArrayList<>();
 
     public static void main(String[] args) {
         char continua = 's';
@@ -34,40 +36,5 @@ public class Main {
         }
     }
 
-    static void tratarInput(){
-        String data = JOptionPane.showInputDialog("Digite a data de nascimento: dd/mm/aaaa");
-        try{
-            nascimento.setTime(sdf.parse(data));
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(null, e.getMessage());
-        }
-    }
-
-    static private void escolherTreinos(String nome){
-        for (int i = 0; i < 2; i++) {
-            String treino = JOptionPane.showInputDialog(
-                    "Diga o tipo de treino que o cliente deseja: Cardiovascular, Lutas, Força, Exercícios Localizados"
-            );
-            //bloco de decisão baseado no input do usuário.
-            switch (treino) {
-                case "Cardiovascular" -> treinos.add(new Cardiovascular());
-                case "Lutas" -> treinos.add(new Lutas());
-                case "Força" -> treinos.add(new Forca());
-                case "Exercícios Localizados" -> treinos.add(new ExercicioLocalizado());
-                default -> JOptionPane.showMessageDialog(null, "Opção Inválida");
-            }
-        }
-        pessoas.add(new Pessoa(nome, nascimento, treinos));
-    }
-
-    static private String getPessoas(){
-        StringBuilder info = new StringBuilder();
-        int count = 1;
-        for (Pessoa pessoa: pessoas){
-            info.append("\n").append(count).append(") ").append(pessoa).append("\n");
-            count++;
-        }
-        return info.toString();
-    }
 
 }
