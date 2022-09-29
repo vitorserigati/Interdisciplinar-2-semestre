@@ -1,4 +1,6 @@
-package oop.interdisciplinar.classes;
+package oop.interdisciplinar.classes.pessoa;
+import oop.interdisciplinar.classes.treinos.Treino;
+
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -14,6 +16,12 @@ public class Pessoa {
         setDataNascimento(dataNascimento);
         setTreino(treino);
         calculaIdade();
+    }
+
+    public void alterarTreinos(ArrayList<Treino> newTreino){
+        if (newTreino != this.treino){
+            treino = newTreino;
+        }
     }
 
     public String getNome(){

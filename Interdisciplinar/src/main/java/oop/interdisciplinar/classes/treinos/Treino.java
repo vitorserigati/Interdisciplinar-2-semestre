@@ -1,4 +1,4 @@
-package oop.interdisciplinar.classes;
+package oop.interdisciplinar.classes.treinos;
 import java.text.MessageFormat;
 
 public abstract class Treino {
@@ -19,9 +19,12 @@ public abstract class Treino {
     protected void setDias(String[] dias){
         this.dias = dias;
     }
+
+    public abstract String info();
+    @Override
     public String toString(){
         return MessageFormat.format(
-                "O treino {0} tem uma carga de {1} dias de treino. Sendo estes nos dias: {2} e {3}", getName(),
+                "{0}\nO treino {1} tem uma carga de {2} dias de treino. Sendo estes nos dias: {3} e {4}",info() , getName(),
                 getDias().length, getDias()[0], getDias()[1]);
     }
 }
