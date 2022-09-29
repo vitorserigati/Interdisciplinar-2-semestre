@@ -1,7 +1,7 @@
 package oop.interdisciplinar.classes;
 import java.text.MessageFormat;
 
-public class Treino {
+public abstract class Treino {
     private String name;
     private String[] dias;
 
