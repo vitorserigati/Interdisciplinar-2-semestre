@@ -25,7 +25,7 @@ public class Pessoa {
     }
 
     public String getNome(){
-        return this.nome;
+        return this.nome.toUpperCase();
     }
     public void setNome(String nome){
         if (nome.length() >= 3 && !nome.equals(this.nome)){
