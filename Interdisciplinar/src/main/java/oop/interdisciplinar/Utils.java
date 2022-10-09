@@ -1,8 +1,10 @@
 package oop.interdisciplinar;
 
-import oop.interdisciplinar.classes.pessoa.Pessoa;
+import oop.interdisciplinar.classes.exercicios.Exercicio;
+import oop.interdisciplinar.classes.pessoas.Pessoa;
 import oop.interdisciplinar.classes.treinos.*;
 import javax.swing.JOptionPane;
+import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -25,14 +27,14 @@ public class Utils {
         treinos.clear();
         for (int i = 0; i < 2; i++) {
             String treino = JOptionPane.showInputDialog(
-                    "Diga o tipo de treino que o cliente deseja: Cardiovascular, Lutas, Força, Exercícios Localizados"
+                    "Diga o tipo de treino que o cliente deseja: A, B, C ou Personalizado."
             ).toLowerCase();
             //bloco de decisão baseado no input do usuário.
             switch (treino) {
-                case "cardiovascular" -> treinos.add(new Cardiovascular());
-                case "lutas" -> treinos.add(new Lutas());
-                case "força" -> treinos.add(new Forca());
-                case "exercícios localizados" -> treinos.add(new ExercicioLocalizado());
+                case "a" -> treinos.add(new TreinoA());
+                case "b" -> treinos.add(new TreinoB());
+                case "c" -> treinos.add(new TreinoC());
+                case "personalizado" -> treinos.add(createTreino());
                 default -> JOptionPane.showMessageDialog(null, "Opção Inválida");
             }
         }
@@ -51,6 +53,50 @@ public class Utils {
             count++;
         }
         return info.toString();
+    }
+
+    public static ArrayList<Exercicio> createExercicioArray(String path){
+        ArrayList<Exercicio> exercicio = new ArrayList<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(path))){
+            String line = br.readLine();
+            line = br.readLine();
+            while(line != null){
+                String[] vect = line.split(",");
+                exercicio.add(new Exercicio(Integer.parseInt(vect[0]), vect[1], vect[2]));
+                line = br.readLine();
+            }
+        }
+        catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+        return exercicio;
+    }
+
+    private static TreinoPersonalizado createTreino(){
+
+        String[] dias = JOptionPane.showInputDialog("Digite os dias de seu treino (Separados por espaços): ").split(" ");
+        ArrayList<Exercicio> escolhidos = new ArrayList<>();
+        ArrayList<Exercicio> tipos = createExercicioArray(Main.file);
+        while(escolhidos.size() < 13){
+            StringBuilder string = new StringBuilder();
+            for (Exercicio e : tipos) {
+                string.append(e);
+            }
+            int escolha = Integer.parseInt(JOptionPane.showInputDialog("Digite o número dos exercícios que o cliente deseja: \n" + string));
+            if(escolha > 0 && escolha < 32){
+                escolhidos.add(tipos.get(escolha - 1));
+            }else{
+                    JOptionPane.showMessageDialog(null,"Valor inexistente. Tente novamente");
+            }
+        }
+        StringBuilder string = new StringBuilder();
+        for(Exercicio e : escolhidos){
+            string.append(e);
+        }
+        JOptionPane.showMessageDialog(null, string);
+
+        return new TreinoPersonalizado(dias, escolhidos);
     }
 
 }

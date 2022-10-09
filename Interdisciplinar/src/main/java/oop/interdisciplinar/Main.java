@@ -1,6 +1,8 @@
 package oop.interdisciplinar;
-import oop.interdisciplinar.classes.pessoa.Pessoa;
+import oop.interdisciplinar.classes.exercicios.Exercicio;
+import oop.interdisciplinar.classes.pessoas.Pessoa;
 import javax.swing.JOptionPane;
+import java.io.File;
 import java.util.ArrayList;
 
 import static oop.interdisciplinar.Utils.*;
@@ -8,8 +10,10 @@ import static oop.interdisciplinar.Utils.*;
 
 public class Main {
     private static final ArrayList<Pessoa> pessoas = new ArrayList<>();
+    public static String file = new File("").getAbsolutePath() + File.separator + "/src/main/resources/db/exercicios.csv";
 
     public static void main(String[] args) {
+
         char continua = 's';
         int count = 1;
         // Loop de repetição para que continue cadastrando novos usuários

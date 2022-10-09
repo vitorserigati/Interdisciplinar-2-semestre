@@ -1,4 +1,4 @@
-package oop.interdisciplinar.classes.pessoa;
+package oop.interdisciplinar.classes.pessoas;
 import oop.interdisciplinar.classes.treinos.Treino;
 
 import javax.swing.*;
