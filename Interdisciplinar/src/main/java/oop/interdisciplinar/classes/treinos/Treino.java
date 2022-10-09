@@ -20,6 +20,7 @@ public abstract class Treino {
         this.dias = dias;
     }
 
+
     public abstract String info();
     @Override
     public String toString(){
