@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import static oop.interdisciplinar.Utils.createExercicioArray;
 
 public class TreinoC extends Treino{
-    ArrayList<Exercicio> exercicio = new ArrayList<>();
+    private ArrayList<Exercicio> exercicio = new ArrayList<>();
 
     public TreinoC(){
         String[] dias = new String[]{"Quarta", "Sábado"};

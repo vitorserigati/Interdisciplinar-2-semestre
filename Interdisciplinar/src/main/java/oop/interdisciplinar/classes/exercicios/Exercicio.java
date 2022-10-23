@@ -1,7 +1,5 @@
 package oop.interdisciplinar.classes.exercicios;
 
-import java.io.Serializable;
-
 public class Exercicio {
 
     private int id;
@@ -35,9 +33,6 @@ public class Exercicio {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     @Override
     public String toString(){

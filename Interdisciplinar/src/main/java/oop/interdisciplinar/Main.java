@@ -1,6 +1,6 @@
 package oop.interdisciplinar;
-import oop.interdisciplinar.classes.exercicios.Exercicio;
 import oop.interdisciplinar.classes.pessoas.Pessoa;
+
 import javax.swing.JOptionPane;
 import java.io.File;
 import java.util.ArrayList;
@@ -28,7 +28,7 @@ public class Main {
         }
         char decisao = JOptionPane.showInputDialog("Deseja exibir os dados dos usuários? (s/n)").toLowerCase().charAt(0);
         switch (decisao) {
-            case 's' -> JOptionPane.showMessageDialog(null, getPessoas(pessoas));
+            case 's' -> JOptionPane.showMessageDialog(null, getPessoas(pessoas), "Clientes", 2);
             case 'n' -> JOptionPane.showMessageDialog(null, "Obrigado por utilizar nosso programa!");
             default -> JOptionPane.showMessageDialog(null, "Opção inválida. Encerrando programa.");
         }

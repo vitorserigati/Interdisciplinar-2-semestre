@@ -16,7 +16,7 @@ public class TreinoA extends Treino{
     public TreinoA(){
         String[] dias = new String[]{"Terça", "Quinta"};
         super.setDias(dias);
-        super.setName("Treino A");
+        super.setName("Treino  A");
         popularExercicio();
     }
     public StringBuilder getExercicio() {

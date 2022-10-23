@@ -20,7 +20,7 @@ public abstract class Treino {
         this.dias = dias;
     }
 
-
+    public abstract StringBuilder getExercicio();
     public abstract String info();
     @Override
     public String toString(){

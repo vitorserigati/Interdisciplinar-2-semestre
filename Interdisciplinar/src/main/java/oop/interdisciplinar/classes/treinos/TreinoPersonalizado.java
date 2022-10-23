@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class TreinoPersonalizado extends Treino{
 
-    ArrayList<Exercicio> exercicios;
+    private ArrayList<Exercicio> exercicios;
     public TreinoPersonalizado(String[] dias, ArrayList<Exercicio> exercicios){
         super.setDias(dias);
         this.exercicios = exercicios;
