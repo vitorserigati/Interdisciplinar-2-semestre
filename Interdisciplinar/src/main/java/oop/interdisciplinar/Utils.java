@@ -31,11 +31,21 @@ public class Utils {
             ).toLowerCase();
             //bloco de decisão baseado no input do usuário.
             switch (treino) {
-                case "a" -> treinos.add(new TreinoA());
-                case "b" -> treinos.add(new TreinoB());
-                case "c" -> treinos.add(new TreinoC());
-                case "personalizado" -> treinos.add(createTreino());
-                default -> JOptionPane.showMessageDialog(null, "Opção Inválida");
+                case "a":
+                    treinos.add(new TreinoA());
+                    break;
+                case "b":
+                    treinos.add(new TreinoB());
+                    break;
+                case "c": 
+                    treinos.add(new TreinoC());
+                    break;
+                case "personalizado":
+                    treinos.add(createTreino());
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Opção Inválida");
+                    break;
             }
         }
         if (treinos.size() < 2){

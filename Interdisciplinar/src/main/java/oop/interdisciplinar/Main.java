@@ -28,9 +28,15 @@ public class Main {
         }
         char decisao = JOptionPane.showInputDialog("Deseja exibir os dados dos usuários? (s/n)").toLowerCase().charAt(0);
         switch (decisao) {
-            case 's' -> JOptionPane.showMessageDialog(null, getPessoas(pessoas), "Clientes", 2);
-            case 'n' -> JOptionPane.showMessageDialog(null, "Obrigado por utilizar nosso programa!");
-            default -> JOptionPane.showMessageDialog(null, "Opção inválida. Encerrando programa.");
+            case 's':
+                JOptionPane.showMessageDialog(null, getPessoas(pessoas), "Clientes", 2);
+                break;
+            case 'n':
+                JOptionPane.showMessageDialog(null, "Obrigado por utilizar nosso programa!");
+                break;
+            default:
+                JOptionPane.showMessageDialog(null, "Opção inválida. Encerrando programa.");
+                break;
         }
     }
 
